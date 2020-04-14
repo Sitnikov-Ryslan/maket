@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style1.css">
+	<title>Maket</title>
+</head>
+<body>
+	<div class="page">
+		<div class="forms">
+			<input type="radio" id="tab1" name="tabs" checked>
+			<label class="tab tab1" for="tab1" title="Вкладка1">Профиль</label>
+			<input type="radio" id="tab2" name="tabs">
+			<label class="tab tab2" for="tab2" title="Вкладка2">Друзья пользователя</label>
+				<div class="tab-form" id="form1">
+					<div class="avatar">
+						<div class="avatarImg">
+							<img src="кот.jpg" alt="аватар">
+						</div>
+						<input type="button" class="button" value="Добавить в друзья">
+					</div>
+					<div class="information">
+						<input type="text" class="head" onchange="fun1()" placeholder="Введите имя">
+						<input type="text" class="city" onchange="fun2()" placeholder="Введите город">
+						<div class="container">
+							<div class="columnLeft">
+								<p>Семейное положение</p>
+								<p>Телефон</p>
+								<p>E-mail</p>
+							</div>
+							<div class="columnRight">
+								<p>
+									<select name="select" size="1">
+										<option value="холост" selected>холост</option>
+										<option value="занят">женат/замужем</option>
+										<option value="все сложно">все сложно</option>
+									</select>
+								</p>
+								<p><input type="tel" class="tel" maxlength="18" onchange="fun3()" placeholder="Введите телефон"></p>
+								<p class="mail"><input type="email" class="email" onchange="fun4()" placeholder="Введите Email"></p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<p class="interests">Интересы</p>
+						<input type="text" class="newItemText" maxlength="20" placeholder="Введите интерес" >
+						<button class="addInterest">Добавить</button>
+						<div class="interestsList">
+							<div class="int">музыка</div>
+							<div class="int">компьютеры</div>
+							<div class="int">радио</div>
+						</div>
+					</div>
+				</div>
+				
+				<template id="interestTemplate">
+					<div class="int"></div>
+				</template>	
+
+				<div class="tab-form" id="form2">
+					<div class="friends">
+						<div class="friendsItem">
+							<img src="Лев Бронштейн.jpg" class="avatarFriend" alt="аватар">
+							<div class="info">
+								<p class="name">Лев Бронштейн</p>
+								<p class="residence">г. Ханты-Мансийск</p>
+								<p class="online">Online</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="friendsItem">
+							<img src="Находка Капитал.jpg" class="avatarFriend" alt="аватар">
+							<div class="info">
+								<p class="name">Находка Капитал</p>
+								<p class="residence">г. Усть-Бельск</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="friendsItem">
+							<img src="Яндекс Петренко.jpg" class="avatarFriend" alt="аватар">
+							<div class="info">
+								<p class="name">Яндекс Петренко</p>
+								<p class="residence">г. Пермь</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="friendsItem">
+							<img src="Успех Возможностей.jpg" class="avatarFriend" alt="аватар">
+							<div class="info">
+								<p class="name">Успех Возможностей</p>
+								<p class="residence">г. Радонеж</p>
+								<p class="online">Online</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="friendsItem">
+							<img src="Инна Нашлась.jpg" class="avatarFriend" alt="аватар">
+							<div class="info">
+								<p class="name">Инна Нашлась</p>
+								<p class="residence">г. Омск</p>
+								<p class="online">Online</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="friendsItem">
+							<img src="Алла Подольская.jpg" class="avatarFriend" alt="аватар">
+							<div class="info">
+								<p class="name">Алла Подольская</p>
+								<p class="residence">г. Петропавловск-<br>Камчатский</p>
+								<p class="online">Online</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>		
+					</div>
+				</div>
+		</div>	
+	</div>
+	<script src="localstorage.js"></script>
+	<script src="interest.js"></script>
+</body>
+</html>
