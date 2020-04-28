@@ -61,10 +61,6 @@ body {
 	display: flex;
 }
 
-.forms input {
-	display: block;
-}
-
 .tab {
 	display: inline-block;
 	border-radius: 5px 5px 0 0;
@@ -141,6 +137,7 @@ input[name="tabs"] {
 }
 
 .userName {
+	display: block;
 	font-size: 23px;
 	margin-top: 5px;
 	margin-bottom: 2px;
@@ -152,6 +149,7 @@ input[name="tabs"] {
 }
 
 .userCity {
+	display: block;
 	font-size: 11px;
 	padding: 0;
 	margin-top: 0;
@@ -166,21 +164,21 @@ input[name="tabs"] {
 	margin-bottom: 32px;
 }
 
-.userData p {
-	margin-top: 0;
-	margin-bottom: 10px;
-}
-
 .columnLeft {
 	font-weight: bold;
 	margin-right: 33px;
 }
 
-.columnLeft p:last-child {
+.dataItem {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.dataItem:last-child {
 	margin-bottom: 0;
 }
 
-select {
+.status {
 	border: none;
 	cursor: pointer;
 	-webkit-appearance: none;
@@ -191,16 +189,18 @@ select {
 }
 
 .phone {
+	display: block;
 	border: none;
 	font-size: 12px;
 	width: 105px;
 	margin-bottom: 8px;
 }
 
-.columnRight .mail {
+.mail {
 	width: 86px;
 	position: relative;
 	display: inline-block;
+	margin-top: 0;
 	margin-bottom: 0;
 }
 
@@ -216,6 +216,7 @@ select {
 }
 
 .email {
+	display: block;
 	border: none;
 	font-size: 12px;
 	color: #1574af;
@@ -318,24 +319,16 @@ select {
 
 #form2 {
 	padding-right: 12px;
-}
-
-.friends {
-	width: 460px;
-	height: 249px;
-	margin: 0;
-	padding: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
-	display: flex;
 	flex-wrap: wrap;
 	justify-content: left;
 }
 
-.friendsItem {
+.friend {
 	display: flex;
 	height: 93px;
-	width: 49%;
+	width: 50%;
 	max-width: 223px;
 }
 
@@ -352,7 +345,7 @@ select {
 
 .friendInfo {
 	position: relative;
-	max-width: 62%;
+	max-width: 63%;
 }
 
 .friendName {
@@ -420,14 +413,10 @@ select {
 
 	#form2 {
 		height: auto;
+		overflow: visible;
 	}
 	
-	.friends {
-		overflow: visible;
-		height: auto;
-	}
-
-	.friendsItem {
+	.friend {
 		max-width: 100%;
 		width: 100%;
 	}
