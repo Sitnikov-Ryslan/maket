@@ -13,103 +13,98 @@
 			<label class="tab tab1" for="tab1" title="Вкладка1">Профиль</label>
 			<input type="radio" id="tab2" name="tabs">
 			<label class="tab tab2" for="tab2" title="Вкладка2">Друзья пользователя</label>
-				<div class="tab-form" id="form1">
+				<div class="tabForm" id="form1">
 					<div class="avatar">
-						<div class="avatarImg">
-							<img src="кот.jpg" alt="аватар">
-						</div>
-						<input type="button" class="button" value="Добавить в друзья">
+						<img class="avatarImg" src="кот.jpg" alt="аватар">
+						<input type="button" class="addFriend" value="Добавить в друзья">
 					</div>
-					<div class="information">
-						<input type="text" class="head" onchange="fun1()" placeholder="Введите имя">
-						<input type="text" class="city" onchange="fun2()" placeholder="Введите город">
-						<div class="container">
+					<div class="userInfo">
+						<input type="text" class="userName" id="userName" placeholder="Введите имя">
+						<input type="text" class="userCity" id="userCity" placeholder="Введите город">
+						<div class="userData">
 							<div class="columnLeft">
 								<p>Семейное положение</p>
 								<p>Телефон</p>
 								<p>E-mail</p>
 							</div>
 							<div class="columnRight">
-								<p>
-									<select name="select" size="1">
-										<option value="холост" selected>холост</option>
-										<option value="занят">женат/замужем</option>
-										<option value="все сложно">все сложно</option>
-									</select>
+								<select name="select" size="1">
+									<option value="холост" selected>холост</option>
+									<option value="занят">женат/замужем</option>
+									<option value="все сложно">все сложно</option>
+								</select>
+								<input type="tel" class="phone" id="phone" maxlength="18" placeholder="Введите телефон">
+								<p class="mail">
+									<input type="email" class="email" id="email" placeholder="Введите Email">
 								</p>
-								<p><input type="tel" class="tel" maxlength="18" onchange="fun3()" placeholder="Введите телефон"></p>
-								<p class="mail"><input type="email" class="email" onchange="fun4()" placeholder="Введите Email"></p>
 							</div>
-							<div class="clearfix"></div>
 						</div>
 						<p class="interests">Интересы</p>
 						<input type="text" class="newItemText" maxlength="20" placeholder="Введите интерес" >
 						<button class="addInterest">Добавить</button>
+						<div class="emptyNewInterestItem">
+							<span>Заполните поле с вашим интересом</span>
+							<button class="closeMessage"></button>
+						</div>
 						<div class="interestsList">
-							<div class="int">музыка</div>
-							<div class="int">компьютеры</div>
-							<div class="int">радио</div>
+							<div class="interestsItem">музыка</div>
+							<div class="interestsItem">компьютеры</div>
+							<div class="interestsItem">радио</div>
 						</div>
 					</div>
 				</div>
 				
 				<template id="interestTemplate">
-					<div class="int"></div>
+					<div class="interestsItem"></div>
 				</template>	
 
-				<div class="tab-form" id="form2">
+				<div class="tabForm" id="form2">
 					<div class="friends">
 						<div class="friendsItem">
 							<img src="Лев Бронштейн.jpg" class="avatarFriend" alt="аватар">
-							<div class="info">
-								<p class="name">Лев Бронштейн</p>
-								<p class="residence">г. Ханты-Мансийск</p>
+							<div class="friendInfo">
+								<p class="friendName">Лев Бронштейн</p>
+								<p class="friendCity">г. Ханты-Мансийск</p>
 								<p class="online">Online</p>
 							</div>
-							<div class="clearfix"></div>
 						</div>
 						<div class="friendsItem">
 							<img src="Находка Капитал.jpg" class="avatarFriend" alt="аватар">
-							<div class="info">
-								<p class="name">Находка Капитал</p>
-								<p class="residence">г. Усть-Бельск</p>
+							<div class="friendInfo">
+								<p class="friendName">Находка Капитал</p>
+								<p class="friendCity">г. Усть-Бельск</p>
 							</div>
-							<div class="clearfix"></div>
 						</div>
 						<div class="friendsItem">
 							<img src="Яндекс Петренко.jpg" class="avatarFriend" alt="аватар">
-							<div class="info">
-								<p class="name">Яндекс Петренко</p>
-								<p class="residence">г. Пермь</p>
+							<div class="friendInfo">
+								<p class="friendName">Яндекс Петренко</p>
+								<p class="friendCity">г. Пермь</p>
 							</div>
-							<div class="clearfix"></div>
 						</div>
 						<div class="friendsItem">
 							<img src="Успех Возможностей.jpg" class="avatarFriend" alt="аватар">
-							<div class="info">
-								<p class="name">Успех Возможностей</p>
-								<p class="residence">г. Радонеж</p>
+							<div class="friendInfo">
+								<p class="friendName">Успех Возможностей</p>
+								<p class="friendCity">г. Радонеж</p>
 								<p class="online">Online</p>
 							</div>
-							<div class="clearfix"></div>
 						</div>
 						<div class="friendsItem">
 							<img src="Инна Нашлась.jpg" class="avatarFriend" alt="аватар">
-							<div class="info">
-								<p class="name">Инна Нашлась</p>
-								<p class="residence">г. Омск</p>
+							<div class="friendInfo">
+								<p class="friendName">Инна Нашлась</p>
+								<p class="friendCity">г. Омск</p>
 								<p class="online">Online</p>
 							</div>
-							<div class="clearfix"></div>
 						</div>
 						<div class="friendsItem">
 							<img src="Алла Подольская.jpg" class="avatarFriend" alt="аватар">
-							<div class="info">
-								<p class="name">Алла Подольская</p>
-								<p class="residence">г. Петропавловск-<br>Камчатский</p>
+							<div class="friendInfo">
+								<p class="friendName">Алла Подольская</p>
+								<p class="friendCity">г. Петропавловск-Камчатский</p>
 								<p class="online">Online</p>
 							</div>
-							<div class="clearfix"></div>
 						</div>		
 					</div>
 				</div>

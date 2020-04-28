@@ -3,7 +3,17 @@ let items = list.children;
 let newItemForm = document.querySelector('.addInterest');
 let newItemText = document.querySelector('.newItemText');
 let interestTemplate = document.querySelector('#interestTemplate').content;
-let newItemTemplate = interestTemplate.querySelector('.int');
+let newItemTemplate = interestTemplate.querySelector('.interestsItem');
+let emptyInterestMessage = document.querySelector('.emptyNewInterestItem');
+
+let toggleEmptyMessage = function() {
+	emptyInterestMessage.classList.add('active');
+	let closeBtn = emptyInterestMessage.querySelector('.closeMessage');
+	closeBtn.addEventListener('click', function(event) {
+		event.preventDefault();
+		emptyInterestMessage.classList.remove('active');
+	});
+};
 
 newItemForm.addEventListener('click', function() {
 	if (newItemText.value !== '') {
@@ -11,9 +21,10 @@ newItemForm.addEventListener('click', function() {
 		interest.textContent = newItemText.value;
 		deleteItem(interest);
 		list.prepend(interest);
+		emptyInterestMessage.classList.remove('active');
 		newItemText.value = '';
 	} else {
-		alert('Заполните поле с вашим интересом');
+		toggleEmptyMessage();
 	}
 
 });

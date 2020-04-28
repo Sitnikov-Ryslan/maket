@@ -1,18 +1,18 @@
-let userName = document.querySelector('.head');
-if (localStorage.getItem('user') === null) {
+let userName = document.querySelector('.userName');
+if (localStorage.getItem('userName') === null) {
 	userName.value = 'Виталя Гора';
 } else {
-	userName.value = localStorage.getItem('user');
+	userName.value = localStorage.getItem('userName');
 }
 
-let userCity = document.querySelector('.city');
-if (localStorage.getItem('city') === null) {
+let userCity = document.querySelector('.userCity');
+if (localStorage.getItem('userCity') === null) {
 	userCity.value = 'г. Нижние Шахты';
 } else {
-	userCity.value = localStorage.getItem('city');
+	userCity.value = localStorage.getItem('userCity');
 }
 
-let userPhone = document.querySelector('.tel');
+let userPhone = document.querySelector('.phone');
 if (localStorage.getItem('phone') === null) {
 	userPhone.value = '+7 (440) 554-32-12';
 } else {
@@ -26,19 +26,14 @@ if (localStorage.getItem('email') === null) {
 	userEmail.value = localStorage.getItem('email');
 }
 
-function fun1() {
-	localStorage.setItem('user', userName.value);
-}
+let addLocalStorage = function(id, input) {
+	input.addEventListener("change", function() {
+    localStorage.setItem(id, input.value);
+    });
+};
 
-function fun2() {
-	localStorage.setItem('city', userCity.value);
-}
-
-function fun3() {
-	localStorage.setItem('phone', userPhone.value);
-}
-
-function fun4() {
-	localStorage.setItem('email', userEmail.value);
-}
-
+let ids = ["userName", "userCity", "phone", "email"];
+for (let id of ids) {
+	let input = document.getElementById(id);
+	addLocalStorage(id, input);
+};
