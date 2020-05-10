@@ -2,11 +2,27 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="IMG/Favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="IMG/Favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="IMG/Favicons/favicon-16x16.png">
+	<link rel="manifest" href="IMG/Favicons/site.webmanifest">
+	<link rel="mask-icon" href="IMG/Favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="description" content="Решение задания стажера">
+	<meta name="google" content="notranslate">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="CSS/style.css">
 	<title>Maket</title>
 </head>
 <body>
+<svg style="display: none;">
+	<symbol id="close" viewBox="0 0 329.26933 329">
+		<path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
+	</symbol>
+</svg>
 	<div class="page">
 		<div class="forms">
 			<input type="radio" id="tab1" name="tabs" checked>
@@ -44,7 +60,11 @@
 						<button class="addInterest">Добавить</button>
 						<div class="emptyNewInterestItem">
 							<span>Заполните поле с вашим интересом</span>
-							<button class="closeMessage"></button>
+							<button class="closeMessage">
+								<svg class="closeIcon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</button>
 						</div>
 						<div class="interestsList">
 							<div class="interestsItem">музыка</div>
