@@ -1,0 +1,65 @@
+// main: style.less
+
+.userData {
+	display: flex;
+	margin-bottom: 32px;
+}
+
+.columnLeft {
+	font-weight: bold;
+	margin-right: 33px;
+}
+
+.dataItem {
+	margin-top: 0;
+	margin-bottom: 10px;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.status {
+	border: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	appearance: none;
+  	font-size: 12px;
+  	margin-bottom: 9px;
+}
+
+.phone {
+	display: block;
+	border: none;
+	font-size: 12px;
+	width: 105px;
+	margin-bottom: 8px;
+}
+
+.mail {
+	width: 86px;
+	position: relative;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+	
+	&:after {
+		content: "";
+		display: block;
+		width: 100%;
+		background-color: @blue;
+		height: 1px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+}
+
+.email {
+	display: block;
+	border: none;
+	font-size: 12px;
+	color: @blue;
+	width: 100%;
+}

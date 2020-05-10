@@ -1,0 +1,47 @@
+// main: style.less
+
+.emptyNewInterestItem {
+	display: none;
+	position: relative;
+	border: 1px solid red;
+	border-radius: 20px;
+	width: 240px;
+	padding: 5px 0 5px 5px;
+	
+	&.active {
+		display: block;
+	}
+}
+
+.closeMessage {
+	display: block;
+	position: absolute;
+	background: transparent;
+	outline: none;
+	width: 20px;
+	height: 20px;
+	border: 0;
+	right: 8px;
+	top: 2px;
+	cursor: pointer;
+	
+	&:before,
+	&:after {
+		content: "";
+		width: 20px;
+		height: 1px;
+		background: red;
+		position: absolute;
+		left: 0;
+	}
+
+	&:before {
+		top: 0px;
+		transform: rotate(45deg) translateY(7px) translateX(7px);
+	}
+
+	&:after {
+		bottom: 0px;
+		transform: rotate(-45deg) translateY(-7px) translateX(6px);
+	}
+}
