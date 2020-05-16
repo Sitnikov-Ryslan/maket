@@ -1,0 +1,50 @@
+// main: style.less
+
+.tabForm {
+	display: none;
+	padding: 15px 15px 14px 15px;
+	background: white;
+	height: 278px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.31);
+	border-radius: 0 5px 5px 5px;
+}
+
+.tabForm.active,
+#tab1:checked ~ #form1,
+#tab2:checked ~ #form2 {
+	display: flex;
+}
+
+.tab {
+	display: inline-block;
+	border-radius: 5px 5px 0 0;
+	background: linear-gradient(to top, #1f68ac, #0685b4);
+	color: white;
+	cursor: pointer;
+	margin-right: 10px;
+	font-size: 14px;
+	text-align: center;
+	padding-top: 8px;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.38);
+	height: 32px;
+}
+
+.tab1 {
+	width: 91px;
+}
+
+.tab2 {
+	width: 169px;
+}
+
+label.tab.active,
+input[name="tabs"]:checked + label {
+	background: white;
+	color: black;
+	text-shadow: none;
+	box-shadow: -1px -1px 3px -2px rgba(0,0,0,0.31);
+}
+
+input[name="tabs"] {
+	display: none;
+}

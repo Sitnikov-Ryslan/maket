@@ -1,0 +1,34 @@
+// main: style.less
+
+.avatar {
+	width: 132px;
+	
+	@media @mobile {
+		margin: 0 auto;
+	}
+}
+
+.avatarImg {
+	width: 132px;
+	height: 169px;
+	box-shadow: inset 0 1px 6px rgba(0,0,0,0.32);
+	border-radius: 5px;
+	margin-bottom: 6px;
+}
+
+.addFriend {
+	height: 30px;
+	width: 132px;
+	cursor: pointer;
+	font-size: 12px;
+	border-radius: 3px;
+	background: linear-gradient(to top, #e65200, #e68200);
+	color: white;
+	border: none;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.38);
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.43);
+	
+	&:hover {
+		background: #f68200;
+	}
+}

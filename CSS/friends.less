@@ -1,0 +1,80 @@
+// main: style.less
+
+.friends {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	overflow-y: auto;
+}
+
+.friend {
+	display: flex;
+	height: 93px;
+	width: 50%;
+	max-width: 223px;
+	
+	@media @mobile {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+.avatarFriend {
+	width: 62px;
+	height: 62px;
+	float: left;
+	margin-top: 1px;
+	border-radius: 3px;
+	margin-bottom: 0;
+	margin-right: 17px;
+	box-shadow: none;
+}
+
+.friendInfo {
+	position: relative;
+	max-width: 63%;
+}
+
+.friendName {
+	position: relative;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	color: @blue;
+	max-width: 100%;
+	margin-top: 2px;
+	margin-bottom: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+	&:after {
+		content: "";
+		display: block;
+		width: 100%;
+		background-color: @blue;
+		height: 1px;
+		position: absolute;
+		top: 95%;
+		left: 0;
+	}
+}
+
+.friendCity{
+	font-size: 11px;
+	color: #373737;
+	margin-top: 0px;
+	max-height: 25px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.online {
+	font-size: 10px;
+	color: @green;
+	font-style: italic;
+	margin: 0;
+    position: absolute;
+  	left: 0;
+  	top: 50px;
+}

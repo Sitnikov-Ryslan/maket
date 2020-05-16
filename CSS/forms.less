@@ -1,0 +1,30 @@
+// main: style.less
+
+.forms {
+	width: 100%;
+	max-width: 487px;
+	height: auto;
+	min-height: 310px;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+#form1 {
+	justify-content: space-between;
+	
+	@media @mobile {
+		flex-direction: column;
+		height: auto;
+	}
+}
+
+#form2 {
+	padding-right: 12px;
+	overflow-x: hidden;
+	flex-direction: column;
+	
+	@media @mobile {
+		height: auto;
+		overflow: visible;
+	}
+}
