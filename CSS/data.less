@@ -1,0 +1,65 @@
+// main: style.less
+
+.data {
+	display: flex;
+	margin-bottom: 32px;
+}
+
+.column-left {
+	font-weight: bold;
+	margin-right: 33px;
+}
+
+.column-left__item {
+	margin-top: 0;
+	margin-bottom: 10px;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.column-right__status {
+	border: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	appearance: none;
+  	font-size: 12px;
+  	margin-bottom: 9px;
+}
+
+.column-right__phone {
+	display: block;
+	border: none;
+	font-size: 12px;
+	width: 105px;
+	margin-bottom: 8px;
+}
+
+.mail {
+	width: 86px;
+	position: relative;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+	
+	&:after {
+		content: "";
+		display: block;
+		width: 100%;
+		background-color: @blue;
+		height: 1px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+}
+
+.mail__item {
+	display: block;
+	border: none;
+	font-size: 12px;
+	color: @blue;
+	width: 100%;
+}

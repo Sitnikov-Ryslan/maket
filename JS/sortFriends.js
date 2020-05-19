@@ -1,9 +1,9 @@
-const initialFriends = document.querySelectorAll('.friend');
+const initialFriends = document.querySelectorAll('.friends__item');
 const initialFriendsArray = Array.prototype.slice.call(initialFriends);
 
-let friendsList = document.querySelectorAll('.friend');
+let friendsList = document.querySelectorAll('.friends__item');
 let parent = document.querySelector('.friends');
-let btns = document.querySelectorAll('.btn');
+let btns = document.querySelectorAll('.sorting-panel__btn');
 let btnOriginal = document.querySelector('.btn--original');
 let btnOnline = document.querySelector('.btn--online');
 let btnAbc = document.querySelector('.btn--abc');
@@ -17,7 +17,7 @@ btnOriginal.addEventListener("click", function(event) {
   }
   btnOriginal.classList.add('checked');
   
-  let presentFriends = document.querySelectorAll('.friend');
+  let presentFriends = document.querySelectorAll('.friends__item');
   let presentFriendsArray = [];
   let friendsParent = presentFriends[0].parentNode;
   for (let i = 0; i < presentFriends.length; i++) {    
@@ -42,7 +42,7 @@ btnOnline.addEventListener("click", function(event) {
 
 	for (let i = 0; i <= friendsList.length - 1; i++) {
   		let friend = friendsList[i];
-  		let online = friend.querySelector('.online');
+  		let online = friend.querySelector('.friend-info__online');
   		if (online !== null) {
   			parent.prepend(friend);
       };
@@ -58,15 +58,15 @@ btnAbc.addEventListener("click", function(event) {
   };
   btnAbc.classList.add('checked');
 	
-  let nodeList = document.querySelectorAll('.friend');
+  let nodeList = document.querySelectorAll('.friends__item');
   let itemsArray = [];
   let nodeListParent = nodeList[0].parentNode;
   for (let i = 0; i < nodeList.length; i++) {    
     itemsArray.push(nodeListParent.removeChild(nodeList[i]));
   }
   itemsArray.sort(function(nodeA, nodeB) {
-      let nameA = nodeA.querySelector('.friendName').textContent.toLowerCase();
-      let nameB = nodeB.querySelector('.friendName').textContent.toLowerCase();
+      let nameA = nodeA.querySelector('.friend-info__name').textContent.toLowerCase();
+      let nameB = nodeB.querySelector('.friend-info__name').textContent.toLowerCase();
       if (nameA < nameB) return -1;
       if (nameA > nameB) return 1;
       return 0;

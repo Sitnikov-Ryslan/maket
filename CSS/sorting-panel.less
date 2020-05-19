@@ -1,0 +1,57 @@
+// main: style.less
+
+.sorting-panel {
+	display: flex;
+	height: 14%;
+	width: 100%;
+	margin-bottom: 15px;
+    align-items: center;
+    
+    @media @mobile {
+    	flex-wrap: wrap;
+    }
+}
+
+.sorting-panel__text {
+	font-weight: bold;
+	font-style: italic;
+	margin-right: 10px;
+	color: #373737;
+}
+
+ .sorting-panel__btn {
+ 	display: inline-block;
+	border: 1px solid #d5d5d5;
+	color: #757575;
+	padding: 5px 10px 5px 25px;
+	margin-right: 15px;
+	border-radius: 15px;
+	cursor: pointer;
+	outline: 0;
+	position: relative;
+	
+	&:before {
+		display: block;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		content: "";
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background: @blue;
+	}
+	
+	&:hover {
+		color: black;
+		background: #f3f3f3;
+	}
+
+	&.checked:before {
+		background: @green;
+	}
+
+	@media @mobile {
+		margin-top: 5px;
+	}
+ }

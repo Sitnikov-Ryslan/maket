@@ -1,14 +1,14 @@
-let list = document.querySelector('.interestsList');
+let list = document.querySelector('.interests-list');
 let items = list.children;
-let newItemForm = document.querySelector('.addInterest');
-let newItemText = document.querySelector('.newItemText');
+let newItemForm = document.querySelector('.user__add-interest');
+let newItemText = document.querySelector('.user__new-item-text');
 let interestTemplate = document.querySelector('#interestTemplate').content;
-let newItemTemplate = interestTemplate.querySelector('.interestsItem');
-let emptyInterestMessage = document.querySelector('.emptyNewInterestItem');
+let newItemTemplate = interestTemplate.querySelector('.interests-list__item');
+let emptyInterestMessage = document.querySelector('.empty-new-interest-item');
 
 let toggleEmptyMessage = function() {
 	emptyInterestMessage.classList.add('active');
-	let closeBtn = emptyInterestMessage.querySelector('.closeMessage');
+	let closeBtn = emptyInterestMessage.querySelector('.close-message');
 	closeBtn.addEventListener('click', function(event) {
 		event.preventDefault();
 		emptyInterestMessage.classList.remove('active');
