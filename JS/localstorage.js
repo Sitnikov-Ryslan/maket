@@ -19,7 +19,7 @@ if (localStorage.getItem('phone') === null) {
 	userPhone.value = localStorage.getItem('phone');
 }
 
-let userEmail = document.querySelector('.mail__item');
+let userEmail = document.querySelector('.mail__input');
 if (localStorage.getItem('email') === null) {
 	userEmail.value = 'vitalya@gora.ru';
 } else {
