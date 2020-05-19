@@ -1,12 +1,12 @@
-const initialFriends = document.querySelectorAll('.friends__item');
+const initialFriends = document.querySelectorAll('.friend');
 const initialFriendsArray = Array.prototype.slice.call(initialFriends);
 
-let friendsList = document.querySelectorAll('.friends__item');
+let friendsList = document.querySelectorAll('.friend');
 let parent = document.querySelector('.friends');
 let btns = document.querySelectorAll('.sorting-panel__btn');
-let btnOriginal = document.querySelector('.btn--original');
-let btnOnline = document.querySelector('.btn--online');
-let btnAbc = document.querySelector('.btn--abc');
+let btnOriginal = document.querySelector('.btn_original');
+let btnOnline = document.querySelector('.btn_online');
+let btnAbc = document.querySelector('.btn_abc');
 
 /*Сортировка к начальному(оригинальному) состоянию*/
 
@@ -17,7 +17,7 @@ btnOriginal.addEventListener("click", function(event) {
   }
   btnOriginal.classList.add('checked');
   
-  let presentFriends = document.querySelectorAll('.friends__item');
+  let presentFriends = document.querySelectorAll('.friend');
   let presentFriendsArray = [];
   let friendsParent = presentFriends[0].parentNode;
   for (let i = 0; i < presentFriends.length; i++) {    
@@ -58,7 +58,7 @@ btnAbc.addEventListener("click", function(event) {
   };
   btnAbc.classList.add('checked');
 	
-  let nodeList = document.querySelectorAll('.friends__item');
+  let nodeList = document.querySelectorAll('.friend');
   let itemsArray = [];
   let nodeListParent = nodeList[0].parentNode;
   for (let i = 0; i < nodeList.length; i++) {    

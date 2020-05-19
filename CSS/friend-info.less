@@ -1,0 +1,50 @@
+// main: style.less
+
+.friend-info {
+	position: relative;
+	max-width: 63%;
+}
+
+.friend-info__name {
+	position: relative;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	color: @blue;
+	max-width: 100%;
+	margin-top: 2px;
+	margin-bottom: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+	&:after {
+		content: "";
+		display: block;
+		width: 100%;
+		background-color: @blue;
+		height: 1px;
+		position: absolute;
+		top: 95%;
+		left: 0;
+	}
+}
+
+.friend-info__city{
+	font-size: 11px;
+	color: #373737;
+	margin-top: 0px;
+	max-height: 25px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.friend-info__online {
+	font-size: 10px;
+	color: @green;
+	font-style: italic;
+	margin: 0;
+    position: absolute;
+  	left: 0;
+  	top: 50px;
+}
